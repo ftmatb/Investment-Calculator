@@ -1,4 +1,6 @@
 export default function UserInput({ onChange, userinput }) {
+
+  console.log(userinput);
   return (
     <section id="user-input">
       <div className="input-group">
@@ -40,6 +42,7 @@ export default function UserInput({ onChange, userinput }) {
           <input
             type="number"
             required
+            min="1"
             value={userinput.duration}
             onChange={(event) => onChange("duration", event.target.value)}
           />
